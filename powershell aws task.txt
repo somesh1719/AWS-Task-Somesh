@@ -1,0 +1,6 @@
+Step 1: Launch new instance
+Step 2: Genrate new key
+Step 3: Launch Powershell from windows
+step 4: copy path of powershell user location > paste .pem key of Instance.
+step 5: ssh -i key.pem username@publicip
+        Enter and will login to EC2 Instance.
