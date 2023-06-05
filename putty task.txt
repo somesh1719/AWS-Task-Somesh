@@ -1,0 +1,4 @@
+Step 1: Install Putty 64-bit and puttygen 64-bit as per requirement.
+Step 2: Open Puttygen click on Load > go to the Instance .pem key location > Select .pem key open > Ok > Save private key > yes > Save key with new name > close Puttygen.
+Step 3: Launch Instance Copy Public IP go to Connection > SSH > Auth > Click on Credentials > Browse Private key file for authentication > open > open > Accept.
+Step 4: Enter Login name as we select AMI it will get login.

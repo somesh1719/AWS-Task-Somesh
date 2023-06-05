@@ -1,0 +1,8 @@
+Step 1: Crate EC2 Instance
+Step 2: Copy Public ip of the EC2 Instance.
+Step 3: Genrate a new key 
+Step 4: Open MobaXtrem and click on Session then SSH
+Step 5: Enter Public ip in Remote Host
+Step 6: Enter User name in Specify username
+Step 7: Go to Advanced SSH Setting check box Use private key and browse .pem key
+Step 8: Click on OK it will get login.

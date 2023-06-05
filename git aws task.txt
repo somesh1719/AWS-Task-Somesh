@@ -1,0 +1,7 @@
+Step 1: Download portable GIT for Windows.
+Step 2: Launch Instance
+Step 3: Genrate new key
+Step 4: Open GIT.CMD
+Step 5: Go to cd path of the .pem key 
+Step 6: Go to Instance click on Connect go to SSH Client copy SSH path
+Step 7: Paste link in Git.cmd it will connect.
