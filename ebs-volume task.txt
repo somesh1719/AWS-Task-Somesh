@@ -1,0 +1,15 @@
+step:1 create an instance (my-ebs-vol-instance)
+Step:2 Select AMI and Instancr type and create new key pair
+Step:3 In Network select by defoult selected ssh
+Step:4 click on launch instace
+step:5 open Mobaxterm click on ssh past public ip of instance now click in advance option add instance key 
+Step:6 log in as a root user
+step:7 type lsblk see attached block device name xvda1
+step8: create mount directory mkdir /tmp/shan
+step9: type m+help n+create new partion 
+mkfs.xfs /dev/xvda1
+step10: you can cheak formated partion by lsblk -fs
+step11: now mount /dev/xvda1 /tmp/shan
+lsblk -fs
+step12: enter at the very last by "/dev/xvda1 /temp/shan xfs 
+step13: df -h mount-a and check by lsblk -fs now partion is mounted
