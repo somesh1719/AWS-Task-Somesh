@@ -1,0 +1,201 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fmodern Consolas;}{\f1\fmodern\fcharset0 Consolas;}{\f2\fnil\fcharset129 Courier New;}}
+{\colortbl ;\red20\green20\blue20;\red142\green142\blue142;\red16\green158\blue98;\red148\green146\blue12;\red170\green51\blue170;\red170\green64\blue64;\red56\green136\blue159;\red9\green118\blue72;}
+\viewkind4\uc1\pard\f0\fs20 Authenticating with public key "Imported-Openssh-Key"\cf1\highlight2 
+\par \cf0\highlight0     \u9484?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9488?\cf1\highlight2 
+\par \cf0\highlight0     \u9474?                 \cf3\f1\bullet  MobaXterm Personal Edition v23.1 \bullet\cf0\f0                  \u9474?\cf1\highlight2 
+\par \cf0\highlight0     \u9474?               \cf4 (SSH client, X server and network tools)\cf0                \u9474?\cf1\highlight2 
+\par \cf0\highlight0     \u9474?                                                                      \u9474?\cf1\highlight2 
+\par \cf0\highlight0     \u9474? \u11166? SSH session to \cf5 ec2-user@3.110.147.74                     \cf0           \u9474?\cf1\highlight2 
+\par \cf0\highlight0     \u9474?\f1    \bullet  Direct SSH      :  \cf3\f0\u10003?\cf0                                              \u9474?\cf1\highlight2 
+\par \cf0\highlight0     \u9474?\f1    \bullet  SSH compression :  \cf3\f0\u10003?\cf0                                              \u9474?\cf1\highlight2 
+\par \cf0\highlight0     \u9474?\f1    \bullet  SSH-browser     :  \cf3\f0\u10003?\cf0                                              \u9474?\cf1\highlight2 
+\par \cf0\highlight0     \u9474?\f1    \bullet  X11-forwarding  :  \cf6\f0\u10007?\cf0   (disabled or not supported by server)      \u9474?\cf1\highlight2 
+\par \cf0\highlight0     \u9474?                                                                      \u9474?\cf1\highlight2 
+\par \cf0\highlight0     \u9474? \u11166? For more info, ctrl+click on \cf7\ul help\cf0\ulnone  or visit our \cf7\ul website\cf0\ulnone .            \u9474?\cf1\highlight2 
+\par \cf0\highlight0     \u9492?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9496?\cf1\highlight2 
+\par 
+\par \cf0\highlight0    ,     #_\cf1\highlight2 
+\par \cf0\highlight0    ~\\_  ####_        Amazon Linux 2023\cf1\highlight2 
+\par \cf0\highlight0   ~~  \\_#####\\\cf1\highlight2 
+\par \cf0\highlight0   ~~     \\###|\cf1\highlight2 
+\par \cf0\highlight0   ~~       \\#/ ___   https://aws.amazon.com/linux/amazon-linux-2023\cf1\highlight2 
+\par \cf0\highlight0    ~~       V~' '->\cf1\highlight2 
+\par \cf0\highlight0     ~~~         /\cf1\highlight2 
+\par \cf0\highlight0       ~~._.   _/\cf1\highlight2 
+\par \cf0\highlight0          _/ _/\cf1\highlight2 
+\par \cf0\highlight0        _/m/'\cf1\highlight2 
+\par \cf0\highlight0 [ec2-user@ip-172-31-38-49 ~]$ sudo su\cf1\highlight2 
+\par \cf0\highlight0 [root@ip-172-31-38-49 ec2-user]# lsblk\cf1\highlight2 
+\par \cf0\highlight0 NAME      MAJ:MIN RM SIZE RO TYPE MOUNTPOINTS\cf1\highlight2 
+\par \cf0\highlight0 xvda      202:0    0   8G  0 disk\cf1\highlight2 
+\par \cf0\highlight0\u9500?\u9472?xvda1   202:1    0   8G  0 part /\cf1\highlight2 
+\par \cf0\highlight0\u9500?\u9472?xvda127 259:0    0   1M  0 part\cf1\highlight2 
+\par \cf0\highlight0\u9492?\u9472?xvda128 259:1    0  10M  0 part\cf1\highlight2 
+\par \cf0\highlight0 [root@ip-172-31-38-49 ec2-user]# mkdir /tmp/shan\cf1\highlight2 
+\par \cf0\highlight0 [root@ip-172-31-38-49 ec2-user]# fdisk /dev/xvda\cf1\highlight2 
+\par 
+\par \cf8\highlight0 Welcome to fdisk (util-linux 2.37.4).\cf1\highlight2 
+\par \cf0\highlight0 Changes will remain in memory only, until you decide to write them.\cf1\highlight2 
+\par \cf0\highlight0 Be careful before using the write command.\cf1\highlight2 
+\par 
+\par \cf6\highlight0 This disk is currently in use - repartitioning is probably a bad idea.\cf1\highlight2 
+\par \cf6\highlight0 It's recommended to umount all file systems, and swapoff all swap\cf1\highlight2 
+\par \cf6\highlight0 partitions on this disk.\cf1\highlight2 
+\par 
+\par 
+\par \cf0\highlight0 Command (m for help): m\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Help:\cf1\highlight2 
+\par 
+\par \cf0\highlight0\b   GPT\cf1\highlight2\b0 
+\par \cf0\highlight0    M   enter protective/hybrid MBR\cf1\highlight2 
+\par 
+\par \cf0\highlight0\b   Generic\cf1\highlight2\b0 
+\par \cf0\highlight0    d   delete a partition\cf1\highlight2 
+\par \cf0\highlight0    F   list free unpartitioned space\cf1\highlight2 
+\par \cf0\highlight0    l   list known partition types\cf1\highlight2 
+\par \cf0\highlight0    n   add a new partition\cf1\highlight2 
+\par \cf0\highlight0    p   print the partition table\cf1\highlight2 
+\par \cf0\highlight0    t   change a partition type\cf1\highlight2 
+\par \cf0\highlight0    v   verify the partition table\cf1\highlight2 
+\par \cf0\highlight0    i   print information about a partition\cf1\highlight2 
+\par 
+\par \cf0\highlight0\b   Misc\cf1\highlight2\b0 
+\par \cf0\highlight0    m   print this menu\cf1\highlight2 
+\par \cf0\highlight0    x   extra functionality (experts only)\cf1\highlight2 
+\par 
+\par \cf0\highlight0\b   Script\cf1\highlight2\b0 
+\par \cf0\highlight0    I   load disk layout from sfdisk script file\cf1\highlight2 
+\par \cf0\highlight0    O   dump disk layout to sfdisk script file\cf1\highlight2 
+\par 
+\par \cf0\highlight0\b   Save & Exit\cf1\highlight2\b0 
+\par \cf0\highlight0    w   write table to disk and exit\cf1\highlight2 
+\par \cf0\highlight0    q   quit without saving changes\cf1\highlight2 
+\par 
+\par \cf0\highlight0\b   Create a new label\cf1\highlight2\b0 
+\par \cf0\highlight0    g   create a new empty GPT partition table\cf1\highlight2 
+\par \cf0\highlight0    G   create a new empty SGI (IRIX) partition table\cf1\highlight2 
+\par \cf0\highlight0    o   create a new empty DOS partition table\cf1\highlight2 
+\par \cf0\highlight0    s   create a new empty Sun partition table\cf1\highlight2 
+\par 
+\par 
+\par \cf0\highlight0 Command (m for help): n\cf1\highlight2 
+\par \cf0\highlight0 Partition number (2-126, default 2):\cf1\highlight2 
+\par \cf0\highlight0 First sector (34-2047, default 34):\cf1\highlight2 
+\par \cf0\highlight0 Last sector, +/-sectors or +/-size\{K,M,G,T,P\} (34-2047, default 2047):\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Created a new partition 2 of type 'Linux filesystem' and of size 1007 KiB.\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Command (m for help): p\cf1\highlight2 
+\par \cf0\highlight0\b Disk /dev/xvda: 8 GiB, 8589934592 bytes, 16777216 sectors\cf1\highlight2\b0 
+\par \cf0\highlight0 Units: sectors of 1 * 512 = 512 bytes\cf1\highlight2 
+\par \cf0\highlight0 Sector size (logical/physical): 512 bytes / 512 bytes\cf1\highlight2 
+\par \cf0\highlight0 I/O size (minimum/optimal): 512 bytes / 512 bytes\cf1\highlight2 
+\par \cf0\highlight0 Disklabel type: gpt\cf1\highlight2 
+\par \cf0\highlight0 Disk identifier: 79EB14D1-F123-4351-BE2A-D8FC513FD7DC\cf1\highlight2 
+\par 
+\par \cf0\highlight0\b Device      \b0  \b Start\b0  \b      End\b0  \b  Sectors\b0  \b  Size\b0  \b Type\cf1\highlight2\b0 
+\par \cf0\highlight0 /dev/xvda1   24576 16777182 16752607    8G Linux filesystem\cf1\highlight2 
+\par \cf0\highlight0 /dev/xvda2      34     2047     2014 1007K Linux filesystem\cf1\highlight2 
+\par \cf0\highlight0 /dev/xvda127 22528    24575     2048    1M BIOS boot\cf1\highlight2 
+\par \cf0\highlight0 /dev/xvda128  2048    22527    20480   10M EFI System\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Partition table entries are not in disk order.\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Command (m for help): w\cf1\highlight2 
+\par \cf0\highlight0 The partition table has been altered.\cf1\highlight2 
+\par \cf0\highlight0 Syncing disks.\cf1\highlight2 
+\par 
+\par \cf0\highlight0 [root@ip-172-31-38-49 ec2-user]# partprob\cf1\highlight2 
+\par \cf0\highlight0 bash: partprob: command not found\cf1\highlight2 
+\par \cf0\highlight0 [root@ip-172-31-38-49 ec2-user]# "partprob"\cf1\highlight2 
+\par \cf0\highlight0 bash: partprob: command not found\cf1\highlight2 
+\par \cf0\highlight0 [root@ip-172-31-38-49 ec2-user]# mkfs.xfs /dev/xvda1\cf1\highlight2 
+\par \cf0\highlight0 mkfs.xfs: /dev/xvda1 contains a mounted filesystem\cf1\highlight2 
+\par \cf0\highlight0 Usage: mkfs.xfs\cf1\highlight2 
+\par \cf0\highlight0 /* blocksize */         [-b size=num]\cf1\highlight2 
+\par \cf0\highlight0 /* config file */       [-c options=xxx]\cf1\highlight2 
+\par \cf0\highlight0 /* metadata */          [-m crc=0|1,finobt=0|1,uuid=xxx,rmapbt=0|1,reflink=0|1,\cf1\highlight2 
+\par \cf0\highlight0                             inobtcount=0|1,bigtime=0|1]\cf1\highlight2 
+\par \cf0\highlight0 /* data subvol */       [-d agcount=n,agsize=n,file,name=xxx,size=num,\cf1\highlight2 
+\par \cf0\highlight0                             (sunit=value,swidth=value|su=num,sw=num|noalign),\cf1\highlight2 
+\par \cf0\highlight0                             sectsize=num\cf1\highlight2 
+\par \cf0\highlight0 /* force overwrite */   [-f]\cf1\highlight2 
+\par \cf0\highlight0 /* inode size */        [-i perblock=n|size=num,maxpct=n,attr=0|1|2,\cf1\highlight2 
+\par \cf0\highlight0                             projid32bit=0|1,sparse=0|1]\cf1\highlight2 
+\par \cf0\highlight0 /* no discard */        [-K]\cf1\highlight2 
+\par \cf0\highlight0 /* log subvol */        [-l agnum=n,internal,size=num,logdev=xxx,version=n\cf1\highlight2 
+\par \cf0\highlight0                             sunit=value|su=num,sectsize=num,lazy-count=0|1]\cf1\highlight2 
+\par \cf0\highlight0 /* label */             [-L label (maximum 12 characters)]\cf1\highlight2 
+\par \cf0\highlight0 /* naming */            [-n size=num,version=2|ci,ftype=0|1]\cf1\highlight2 
+\par \cf0\highlight0 /* no-op info only */   [-N]\cf1\highlight2 
+\par \cf0\highlight0 /* prototype file */    [-p fname]\cf1\highlight2 
+\par \cf0\highlight0 /* quiet */             [-q]\cf1\highlight2 
+\par \cf0\highlight0 /* realtime subvol */   [-r extsize=num,size=num,rtdev=xxx]\cf1\highlight2 
+\par \cf0\highlight0 /* sectorsize */        [-s size=num]\cf1\highlight2 
+\par \cf0\highlight0 /* version */           [-V]\cf1\highlight2 
+\par \cf0\highlight0                         devicename\cf1\highlight2 
+\par \cf0\highlight0 <devicename> is required unless -d name=xxx is given.\cf1\highlight2 
+\par \cf0\highlight0 <num> is xxx (bytes), xxxs (sectors), xxxb (fs blocks), xxxk (xxx KiB),\cf1\highlight2 
+\par \cf0\highlight0       xxxm (xxx MiB), xxxg (xxx GiB), xxxt (xxx TiB) or xxxp (xxx PiB).\cf1\highlight2 
+\par \cf0\highlight0 <value> is xxx (512 byte blocks).\cf1\highlight2 
+\par \cf0\highlight0 [root@ip-172-31-38-49 ec2-user]# lsblk -fs\cf1\highlight2 
+\par \cf0\highlight0 NAME    FSTYPE FSVER LABEL UUID                                 FSAVAIL FSUSE% MOUNTPOINTS\cf1\highlight2 
+\par \cf0\highlight0 xvda1   xfs          /     0e39c519-1802-45f1-9bf8-61f5bbd358bd    6.5G    19% /\cf1\highlight2 
+\par \cf0\highlight0\u9492?\u9472?xvda\cf1\highlight2 
+\par \cf0\highlight0 xvda2\cf1\highlight2 
+\par \cf0\highlight0\u9492?\u9472?xvda\cf1\highlight2 
+\par \cf0\highlight0 xvda127\cf1\highlight2 
+\par \cf0\highlight0\u9492?\u9472?xvda\cf1\highlight2 
+\par \cf0\highlight0 xvda128 vfat   FAT16       ECFE-5555\cf1\highlight2 
+\par \cf0\highlight0\u9492?\u9472?xvda\cf1\highlight2 
+\par \cf0\highlight0 [root@ip-172-31-38-49 ec2-user]# /dev/xvdf1 /tmp/shan\cf1\highlight2 
+\par \cf0\highlight0 bash: /dev/xvdf1: No such file or directory\cf1\highlight2 
+\par \cf0\highlight0 [root@ip-172-31-38-49 ec2-user]# mount /dev/xvdf1 /tmp/shan\cf1\highlight2 
+\par \cf0\highlight0 mount: /tmp/shan: special device /dev/xvdf1 does not exist.\cf1\highlight2 
+\par \cf0\highlight0 [root@ip-172-31-38-49 ec2-user]# mount /dev/xvda1 /tmp/shan\cf1\highlight2 
+\par \cf0\highlight0 [root@ip-172-31-38-49 ec2-user]# lsblk -fs\cf1\highlight2 
+\par \cf0\highlight0 NAME    FSTYPE FSVER LABEL UUID                                 FSAVAIL FSUSE% MOUNTPOINTS\cf1\highlight2 
+\par \cf0\highlight0 xvda1   xfs          /     0e39c519-1802-45f1-9bf8-61f5bbd358bd    6.5G    19% /tmp/shan\cf1\highlight2 
+\par \cf0\highlight0\u9474?                                                                              /\cf1\highlight2 
+\par \cf0\highlight0\u9492?\u9472?xvda\cf1\highlight2 
+\par \cf0\highlight0 xvda2\cf1\highlight2 
+\par \cf0\highlight0\u9492?\u9472?xvda\cf1\highlight2 
+\par \cf0\highlight0 xvda127\cf1\highlight2 
+\par \cf0\highlight0\u9492?\u9472?xvda\cf1\highlight2 
+\par \cf0\highlight0 xvda128 vfat   FAT16       ECFE-5555\cf1\highlight2 
+\par \cf0\highlight0\u9492?\u9472?xvda\cf1\highlight2 
+\par \cf0\highlight0 [root@ip-172-31-38-49 ec2-user]# Vim /etc/fastab\cf1\highlight2 
+\par \cf0\highlight0 bash: Vim: command not found\cf1\highlight2 
+\par \cf0\highlight0 [root@ip-172-31-38-49 ec2-user]# Vim/etc/fastab\cf1\highlight2 
+\par \cf0\highlight0 bash: Vim/etc/fastab: No such file or directory\cf1\highlight2 
+\par \cf0\highlight0 [root@ip-172-31-38-49 ec2-user]# Vim /etc/fastab\cf1\highlight2 
+\par \cf0\highlight0 bash: Vim: command not found\cf1\highlight2 
+\par \cf0\highlight0 [root@ip-172-31-38-49 ec2-user]# /dev/xvdf1 /temp/shan xfs\cf1\highlight2 
+\par \cf0\highlight0 bash: /dev/xvdf1: No such file or directory\cf1\highlight2 
+\par \cf0\highlight0 [root@ip-172-31-38-49 ec2-user]# /dev/xvda1 /temp/shan xfs\cf1\highlight2 
+\par \cf0\highlight0 bash: /dev/xvda1: Permission denied\cf1\highlight2 
+\par \cf0\highlight0 [root@ip-172-31-38-49 ec2-user]# df -h\cf1\highlight2 
+\par \cf0\highlight0 Filesystem      Size  Used Avail Use% Mounted on\cf1\highlight2 
+\par \cf0\highlight0 devtmpfs        4.0M     0  4.0M   0% /dev\cf1\highlight2 
+\par \cf0\highlight0 tmpfs           475M     0  475M   0% /dev/shm\cf1\highlight2 
+\par \cf0\highlight0 tmpfs           190M  2.8M  188M   2% /run\cf1\highlight2 
+\par \cf0\highlight0 /dev/xvda1      8.0G  1.5G  6.5G  19% /\cf1\highlight2 
+\par \cf0\highlight0 tmpfs           475M     0  475M   0% /tmp\cf1\highlight2 
+\par \cf0\highlight0 tmpfs            95M     0   95M   0% /run/user/1000\cf1\highlight2 
+\par \cf0\highlight0 [root@ip-172-31-38-49 ec2-user]# mount -a\cf1\highlight2 
+\par \cf0\highlight0 [root@ip-172-31-38-49 ec2-user]# lsblk -fs\cf1\highlight2 
+\par \cf0\highlight0 NAME    FSTYPE FSVER LABEL UUID                                 FSAVAIL FSUSE% MOUNTPOINTS\cf1\highlight2 
+\par \cf0\highlight0 xvda1   xfs          /     0e39c519-1802-45f1-9bf8-61f5bbd358bd    6.5G    19% /tmp/shan\cf1\highlight2 
+\par \cf0\highlight0\u9474?                                                                              /\cf1\highlight2 
+\par \cf0\highlight0\u9492?\u9472?xvda\cf1\highlight2 
+\par \cf0\highlight0 xvda2\cf1\highlight2 
+\par \cf0\highlight0\u9492?\u9472?xvda\cf1\highlight2 
+\par \cf0\highlight0 xvda127\cf1\highlight2 
+\par \cf0\highlight0\u9492?\u9472?xvda\cf1\highlight2 
+\par \cf0\highlight0 xvda128 vfat   FAT16       ECFE-5555                               8.7M    13% /boot/efi\cf1\highlight2 
+\par \cf0\highlight0\u9492?\u9472?xvda\cf1\highlight2 
+\par \cf0\highlight0 [root@ip-172-31-38-49 ec2-user]#\cf1\highlight2 
+\par \pard\cf0\highlight0\f2\fs16 
+\par }
+ 
