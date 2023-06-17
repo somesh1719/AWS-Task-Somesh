@@ -1,0 +1,30 @@
+etup Q: ec2 autoscaling to automatically adjust no. of instances based of cpu utilization
+task: *setup ec2 autoscaling to automatically adjust no. of instances based of cpu utilization,
+      *configure alarm to trigger scaling action in real time if cpu threshold exceed,
+      *monitor auto scaling events and instance in real-time to ensure optimal resources utilization and app.performance?
+
+step 1: open AWS go to ec2 dashoard open launch template create template
+launch template name (ec2-auto-tmp)
+step 2: selece amzone aws ami image
+step 3: instance t2 free type
+step 4: create group name (ec2-auto-tmp)
+step 5: create new key pair(template key**)
+step 6: launch template
+step 7: go to ec2 dashboard select autoscaling group option create new auto
+scaling group name(ec2-auto-sacling)
+step 8: click on ec2 template select (ec2-auto-tmp)
+step 9: click next vpc by default availability zones and subnet select all
+step 10: slect next by defoult health check grace period 60 second
+step 11: group size-option desired capacity+3 minimun capacity+2
+maximum capacity+5 select next and create auto scaling group 
+step 12: select auto scaling and now select automatic scaling option
+and click on dynamic policies
+step 13: policy type (Simple scaling) scalling policy name(Decrease-grp)
+now click on cloud watch alarm create new select metric click on Ec2 click on
+By Auto Group option select as-home cpuutilization select and next 
+step 14: now, take ssh of instance 
+step 15: type sudo yum install stress -y 
+step 16: type sudo stress --help
+step 17: copy example line and paste below then edit (stress --cpu 80 --io 4 --vm 2 --vm-bytes 128M --timeout 10m &)
+step 18: type uptime untill it hits the cpu utilization to 80 
+sep 19: goto instance and you will see as the cpu utilization incress the instances are scaled up.

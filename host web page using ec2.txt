@@ -1,0 +1,19 @@
+Q* Host webpage using httpd?
+
+step 1: open ec2 dashboard select and create new instance name(webhost-ins)
+step 2: select existing key pair( if not then create new keypair)
+allow http traffic from internet in firewall
+step 3: go to advance setting select last user data 
+
+step 4: add userdata : 
+	#!/bin/bash
+	sudo yum update 
+	sudo yum install httpd -y
+	sudo systemctl start httpd
+	sudo systemctl enable httpd
+	sudo echo "<h1> Hello Shan "$HOSTNAME"</h1>" > /var/www/html/index.html
+
+step 5: click launch instance wait until status check: 2/2 check passed
+step 6: open ec2 instance copy public ip past on browser press enter  
+
+ webpage is successfully hosted. (Hello Shan)

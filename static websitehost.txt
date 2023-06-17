@@ -1,0 +1,15 @@
+Q* host a static webpage of s3 bucket and enable server access logs?
+
+step 1: open s3 dashboard select create a new bucket name(static-sh-wb)
+step 2: select block public access(give full access)
+step 3: object ownership : ACL enabled click to create bucket 
+step 4: go to browser search css free template dawnload css template
+step 5: open s3 bucket click on upload click add file then click add folder
+one by one select css folder and add  click on upload folder is upload 
+step 6: now open s3 bucket select properties select last static webhosting
+click on edit+enable index document= index.html select save changes
+step 7: select above server access logging > click edit
+> target bucket > give your bucket name > save changes
+goto ACL 
+step 8: open s3 bucket copy url past on browser press
+ enter webpage hosting page is open
