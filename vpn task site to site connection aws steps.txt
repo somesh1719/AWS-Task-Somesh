@@ -1,0 +1,56 @@
+step (1) open VPC Dashboard Create VPC (Mumbai) (AWS Side) IPv4 CIDR block(10.1.0.0/16)
+step (2) create subnet (AWS-side-sub) Aailiability Zone-ap south-1a Ip(10.1.0/24)
+step (3) create Internet Gateway (AWS-Side-IGW)- Attach with VPC
+step (4) create route table (edit route) -0.0.0.0/0 select igw
+step (6) edit subnet association
+step (7) Open VPC Dashboard Create VPC (Virginia) (Cust-End) IPV4 CIDR block(10.2.0.0/16)
+step (8) Create Subnet (Customer-Subnet) Availibility zone-ap south-1a IP(10.2.0.0/24)
+step (9) Create Internet Gateway (Cust-side-IGW)- Attach with VPC
+step (10) Create route table (edit route) -0.0.0.0/0 select igw
+step (11) open ec2 dashboard launch instanch(INS-cust) select aws 
+step (12) select aws image-t2 micro-edit edit key-pair network setting select vpc private ip enable create instance
+step (13) add tag key-name value-customer-machine configuration security group 
+security group name (customer-SG) Description(New) 
+step (13) open Mumbai server vpc dashboard create virtual private gateway(AWS-side-GW) attach vpc
+step (14) create cust-gateway(CG-AWS-SIDE) Routing-static IP(instacnce ip) create
+step (15) create VPN connection(Mumbai-Virginia)-add vpc select customer gatewa yid
+step (16) Routing option-static Static IP prefixes-10.2.0.0/16 create vpn connection 
+step (17) Download Configuration-(generic) go to route table click route propogation select vgw and save
+step (18) go to mobaxterm past verginia public ip name ec2-use go to advance setting add verginia key and launch ssh on mobaxterm 
+step (19) cammand login as: 
+sudo su
+yum insatall openswan -y
+vim /etc/ipsec.conf shift+:=wq
+vim /etc/sysctl.conf=(copy this command) 
+ net.ipv4.ip_forward = 1
+ net.ipv4.conf.all.accept_redirects = 0
+ net.ipv4.conf.all.send_redirects = 0
+ shift+:=wq
+Restart network service
+vim /etc/ipsec.d/aws-vpn.conf=(copy this command)
+        authby=secret
+        auto=start
+        left=%defaultroute
+        leftid=18.232.65.56
+        right=3.109.8.57
+        type=tunnel
+        ikelifetime=8h
+        keylife=1h
+        phase2alg=aes128-sha1;modp1024
+        ike=aes128-sha1;modp1024
+        keyingtries=%forever
+        keyexchange=ike
+        leftsubnet=10.2.0.0/16
+        rightsubnet=10.1.0.0/16
+        dpddelay=10
+        dpdtimeout=30
+        dpdaction=restart_by_peer
+Contents for vim /etc/ipsec.d/aws-vpn.shan
+18.232.65.56 3.109.8.57: PSK "Snxu4rZ61N738hnbMLYYTYcJX.tm3WsB"
+
+Commands to enable/start ipsec service
+           $ chkconfig ipsec on
+           $ service ipsec start
+           $ service ipsec status
+step (20) open ec2 dashboard in Mumbai region Launch instace(Mumbai-cust-vpn) select aws ami image+t2micro+network add vps and create instance edite
+enbound rule selict ipv4 icmp anywhere and save copy public ip of instance past on ssh ping ip and check it's working or not
